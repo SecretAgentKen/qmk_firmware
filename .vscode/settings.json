@@ -5,9 +5,17 @@
     // Configure glob patterns for excluding files and folders.
     "files.exclude": {
         "**/.build": true,
-        "**/*.hex": true,
         "**/*.bin": true,
-        "**/*.uf2": true
+        "**/*.hex": true,
+        "**/*.uf2": true,
+        // crkbd, keebio, sofle
+        "keyboards/[!cks]*": true,
+        "keyboards/[cks][!reo]*": true,
+        "keyboards/[cks][reo][!kef]*": true,
+        "keyboards/[cks][reo][kef][!bl]*": true,
+        "keyboards/[cks][reo][kef][bl][!die]*": true,
+        "keyboards/keebio/[!b]*": true,
+        "keyboards/keebio/b[!d]*": true,
     },
     "files.associations": {
         "*.h": "c",
@@ -26,6 +34,6 @@
     },
     "python.formatting.provider": "yapf",
     "[json]": {
-	    "editor.formatOnSave": false
+        "editor.formatOnSave": false
     }
 }
